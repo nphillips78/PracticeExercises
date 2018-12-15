@@ -1,4 +1,4 @@
-/* Write a JavaScript program to display the current day and time in the following format.  
+/*1.  Write a JavaScript program to display the current day and time in the following format.  
 Sample Output : Today is : Tuesday. 
 Current time is : 10 PM : 30 : 38 */ 
 function displayCurrent() {
@@ -34,12 +34,12 @@ if (hour === 0 && ampm === 'AM') {
 console.log("Current Tie : " + hour + ampm + " : " + minute + " : " + second)
 }
 
-// Write a JS function to print the contents of the current window
+// 2. Write a JS function to print the contents of the current window
 function printCurrentPage() {
   window.print()
 }
 
-//Write a function to get current date
+//3. Write a function to get current date
 function currentDate() {
 const today = new Date()
 const dd = today.getDate()
@@ -62,7 +62,7 @@ console.log(today)
 today = dd + '/' + mm + '/' + yyyy
 }
 
-//write a function to find area of triangle with 3 sides length 5, 6, 7
+//4. write a function to find area of triangle with 3 sides length 5, 6, 7
 function triangleArea() {
   let side1 = 5
   let side2 = 6
@@ -72,7 +72,7 @@ function triangleArea() {
   console.log(area)
 }
 
-// Rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.
+// 5. Rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front.
 function animateString(id) {
   const element = document.getElementById(id)
   const textNode = element.childNodes[0]
@@ -84,8 +84,29 @@ function animateString(id) {
   }, 100)
 }
 
-// Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
+// 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
 year = window.prompt("Input a Year : ")
 x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0)
 console.log(x)
 
+// 7. Write a JavaScript program to find 1st January is being a Sunday between 2014 and 2050
+function findSunday() {
+  for (let year = 2018; year <= 2050; year++) {
+    let d = new Date(year, 0, 1)
+    if (d.getDay() === 0){
+      return "The first year in which January 1st is a Sunday is " + year
+    }
+  }
+}
+
+// 8. Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
+function guessRandom() {
+  const num = Math.ceil(Math.random() * 10)
+  let guess = prompt('Guess a number between 1 and 10')
+  if (guess == num) alert('Matched')
+  else alert('Sorry, the number was ' + num)
+}
+
+// 9. Write a JavaScript program to calculate days left until next Christmas.
+function christmasCountdown() {
+ 
